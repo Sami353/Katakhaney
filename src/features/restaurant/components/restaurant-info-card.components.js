@@ -13,6 +13,11 @@ background-color: white;
 margin:20px;
 `;
 
+const RestaurantCardCover= styled(Card.Cover)`
+padding: 20px;
+background-color:"white";
+`
+
 export const RestaurantInfo = ({ restaurant = {} }) => {
   const {
     name = "Hari dai ko Coffee Pasal",
@@ -26,23 +31,9 @@ export const RestaurantInfo = ({ restaurant = {} }) => {
     isClosedTemporaroily,
   } = restaurant;
   return (
-    <Card style={styles.card} elvation={5}>
-      <Card.Cover style={{ padding: 12 }} source={{ uri: photos[0] }} />
+    <RestaurantCard elvation={5}>
+      <RestaurantCardCover source={{ uri: photos[0] }} />
       <Text>{name}</Text>
-    </Card>
+    </RestaurantCard>
   );
 };
-
-const style = StyleSheet.create({
-  card: {
-    backgroundColor: "white",
-  },
-  cover: {
-    padding: 20,
-    paddingBottom: 0,
-    backgroundColor: "white",
-  },
-  title: {
-    padding: 12,
-  }
-});

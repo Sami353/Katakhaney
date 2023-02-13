@@ -1,12 +1,16 @@
-import { SafeAreaView, StyleSheet, Text, View, StatusBar } from 'react-native';
-import { RestaurantScreen } from './src/features/restaurant/screens/restaurant.screen';
+import { SafeAreaView, StyleSheet, Text, View, StatusBar } from "react-native";
+import { ThemeProvider } from "styled-components/native";
+import { RestaurantScreen } from "./src/features/restaurant/screens/restaurant.screen";
+import { theme } from "./src/infrastructure/theme";
 
 export default function App() {
   return (
     <>
-    <RestaurantScreen />
+      <ThemeProvider theme={theme}>
+        <RestaurantScreen />
+      </ThemeProvider>
     </>
-   );
+  );
 }
 
 const styles = StyleSheet.create({
