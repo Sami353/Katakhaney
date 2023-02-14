@@ -1,6 +1,6 @@
 import { SafeAreaView, StyleSheet, Text, View, StatusBar } from "react-native";
 import { Searchbar } from "react-native-paper";
-import { RestaurantInfo } from "../components/restaurant-info.components";
+import { RestaurantInfo } from "../components/restaurant-info-card.components";
 
 export const RestaurantScreen = () => {
   return (
